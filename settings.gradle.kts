@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Valet"
+rootProject.name = "ENSA Connect"
 include(":app")
