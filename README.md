@@ -10,6 +10,14 @@ Une application Android construite avec Java et Material Design 3.
   <img src="screenshots/home_screen.png" alt="Ecran d'accueil" width="270" />
 </p>
 
+<p align="center">
+  <img src="screenshots/search_empty.png" alt="Recherche" width="270" />
+  &nbsp;&nbsp;&nbsp;
+  <img src="screenshots/search_results.png" alt="Resultats de recherche" width="270" />
+  &nbsp;&nbsp;&nbsp;
+  <img src="screenshots/student_profile.png" alt="Profil etudiant" width="270" />
+</p>
+
 ## Stack Technique
 
 - **Langage** : Java
