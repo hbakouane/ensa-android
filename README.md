@@ -1,101 +1,101 @@
-# Valet - Android App
+# Valet - Application Android
 
-An Android application built with Java and Material Design 3.
+Une application Android construite avec Java et Material Design 3.
 
-## Tech Stack
+## Stack Technique
 
-- **Language**: Java
-- **Min SDK**: API 24 (Android 7.0 Nougat)
-- **Target/Compile SDK**: API 34 (Android 14)
-- **Build System**: Gradle 8.4 with Kotlin DSL (`build.gradle.kts`)
-- **Android Gradle Plugin**: 8.2.2
-- **UI Toolkit**: Material Design 3, AndroidX AppCompat, ConstraintLayout
+- **Langage** : Java
+- **SDK Minimum** : API 24 (Android 7.0 Nougat)
+- **SDK Cible/Compilation** : API 34 (Android 14)
+- **Systeme de build** : Gradle 8.4 avec Kotlin DSL (`build.gradle.kts`)
+- **Plugin Android Gradle** : 8.2.2
+- **Toolkit UI** : Material Design 3, AndroidX AppCompat, ConstraintLayout
 
-## Project Structure
+## Structure du Projet
 
 ```
 android/
 ├── app/
 │   ├── src/main/
-│   │   ├── java/com/valet/app/    # Application source code
-│   │   │   └── MainActivity.java  # Main entry point
+│   │   ├── java/com/valet/app/    # Code source de l'application
+│   │   │   └── MainActivity.java  # Point d'entree principal
 │   │   ├── res/
-│   │   │   ├── layout/            # XML layouts
-│   │   │   ├── values/            # Strings, colors, themes
-│   │   │   └── mipmap-*/          # Launcher icons
+│   │   │   ├── layout/            # Layouts XML
+│   │   │   ├── values/            # Chaines, couleurs, themes
+│   │   │   └── mipmap-*/          # Icones de lancement
 │   │   └── AndroidManifest.xml
-│   ├── build.gradle.kts           # App-level build config
-│   └── proguard-rules.pro         # ProGuard/R8 rules
-├── gradle/wrapper/                # Gradle wrapper
-├── build.gradle.kts               # Root build config
-├── settings.gradle.kts            # Project settings
-└── gradle.properties              # Build properties
+│   ├── build.gradle.kts           # Configuration de build de l'app
+│   └── proguard-rules.pro         # Regles ProGuard/R8
+├── gradle/wrapper/                # Wrapper Gradle
+├── build.gradle.kts               # Configuration de build racine
+├── settings.gradle.kts            # Parametres du projet
+└── gradle.properties              # Proprietes de build
 ```
 
-## Prerequisites
+## Prerequis
 
-- **Java 17** or higher
-- **Android SDK** with:
+- **Java 17** ou superieur
+- **Android SDK** avec :
   - Platform SDK 34 (`platforms;android-34`)
   - Build Tools 34.0.0 (`build-tools;34.0.0`)
 
-### Installing the Android SDK (macOS)
+### Installation du Android SDK (macOS)
 
 ```bash
 brew install --cask android-commandlinetools
 sdkmanager "platforms;android-34" "build-tools;34.0.0" "platform-tools"
 ```
 
-Then create a `local.properties` file in the project root:
+Ensuite, creez un fichier `local.properties` a la racine du projet :
 
 ```properties
 sdk.dir=/opt/homebrew/share/android-commandlinetools
 ```
 
-Or set the `ANDROID_HOME` environment variable instead.
+Ou definissez la variable d'environnement `ANDROID_HOME` a la place.
 
-## Building
+## Compilation
 
-### Debug build
+### Build debug
 
 ```bash
 ./gradlew assembleDebug
 ```
 
-The APK will be generated at `app/build/outputs/apk/debug/app-debug.apk`.
+L'APK sera genere dans `app/build/outputs/apk/debug/app-debug.apk`.
 
-### Release build
+### Build release
 
 ```bash
 ./gradlew assembleRelease
 ```
 
-> Note: Release builds require signing configuration. See the [Android signing docs](https://developer.android.com/studio/publish/app-signing) for setup instructions.
+> Note : Les builds release necessitent une configuration de signature. Consultez la [documentation de signature Android](https://developer.android.com/studio/publish/app-signing) pour les instructions.
 
-### Clean build
+### Build propre
 
 ```bash
 ./gradlew clean assembleDebug
 ```
 
-## Running
+## Execution
 
-### On a connected device or emulator
+### Sur un appareil connecte ou un emulateur
 
 ```bash
 ./gradlew installDebug
 ```
 
-Or open the project in Android Studio and click **Run**.
+Ou ouvrez le projet dans Android Studio et cliquez sur **Run**.
 
-## Dependencies
+## Dependances
 
-| Library | Version | Purpose |
-|---------|---------|---------|
-| `androidx.appcompat:appcompat` | 1.6.1 | Backward-compatible Activity and UI components |
-| `com.google.android.material:material` | 1.11.0 | Material Design 3 components and theming |
-| `androidx.constraintlayout:constraintlayout` | 2.1.4 | Flexible layout manager |
+| Bibliotheque | Version | Utilisation |
+|--------------|---------|-------------|
+| `androidx.appcompat:appcompat` | 1.6.1 | Composants Activity et UI retro-compatibles |
+| `com.google.android.material:material` | 1.11.0 | Composants et theming Material Design 3 |
+| `androidx.constraintlayout:constraintlayout` | 2.1.4 | Gestionnaire de layout flexible |
 
-## License
+## Licence
 
-All rights reserved.
+Tous droits reserves.
