@@ -2,6 +2,14 @@
 
 Une application Android construite avec Java et Material Design 3.
 
+## Captures d'ecran
+
+<p align="center">
+  <img src="screenshots/app_main.png" alt="Ecran principal" width="270" />
+  &nbsp;&nbsp;&nbsp;
+  <img src="screenshots/home_screen.png" alt="Ecran d'accueil" width="270" />
+</p>
+
 ## Stack Technique
 
 - **Langage** : Java
