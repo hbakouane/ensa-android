@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.valet.app.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_eventDetail"
+            app:destination="@id/eventDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/clubsFragment"
+        android:name="com.valet.app.ui.clubs.ClubsFragment"
+        android:label="Clubs"
+        tools:layout="@layout/fragment_clubs">
+        <action
+            android:id="@+id/action_clubs_to_clubDetail"
+            app:destination="@id/clubDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventsFragment"
+        android:name="com.valet.app.ui.events.EventsFragment"
+        android:label="Events"
+        tools:layout="@layout/fragment_events">
+        <action
+            android:id="@+id/action_events_to_eventDetail"
+            app:destination="@id/eventDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.valet.app.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profile_to_editProfile"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_profile_to_bookmarks"
+            app:destination="@id/bookmarksFragment" />
+        <action
+            android:id="@+id/action_profile_to_clubDetail"
+            app:destination="@id/clubDetailFragment" />
+        <action
+            android:id="@+id/action_profile_to_eventDetail"
+            app:destination="@id/eventDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/clubDetailFragment"
+        android:name="com.valet.app.ui.clubs.ClubDetailFragment"
+        android:label="Club Detail"
+        tools:layout="@layout/fragment_club_detail">
+        <argument
+            android:name="clubId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_clubDetail_to_eventDetail"
+            app:destination="@id/eventDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventDetailFragment"
+        android:name="com.valet.app.ui.events.EventDetailFragment"
+        android:label="Event Detail"
+        tools:layout="@layout/fragment_event_detail">
+        <argument
+            android:name="eventId"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.valet.app.ui.profile.EditProfileFragment"
+        android:label="Edit Profile"
+        tools:layout="@layout/fragment_edit_profile" />
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.valet.app.ui.search.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_search_to_clubDetail"
+            app:destination="@id/clubDetailFragment" />
+        <action
+            android:id="@+id/action_search_to_eventDetail"
+            app:destination="@id/eventDetailFragment" />
+        <action
+            android:id="@+id/action_search_to_studentProfile"
+            app:destination="@id/studentProfileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/studentProfileFragment"
+        android:name="com.valet.app.ui.profile.StudentProfileFragment"
+        android:label="Student Profile"
+        tools:layout="@layout/fragment_student_profile">
+        <argument
+            android:name="studentId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_studentProfile_to_clubDetail"
+            app:destination="@id/clubDetailFragment" />
+        <action
+            android:id="@+id/action_studentProfile_to_eventDetail"
+            app:destination="@id/eventDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookmarksFragment"
+        android:name="com.valet.app.ui.bookmarks.BookmarksFragment"
+        android:label="Bookmarks"
+        tools:layout="@layout/fragment_bookmarks">
+        <action
+            android:id="@+id/action_bookmarks_to_eventDetail"
+            app:destination="@id/eventDetailFragment" />
+    </fragment>
+</navigation>

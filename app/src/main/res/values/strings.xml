@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Valet</string>
+    <string name="title_home">Home</string>
+    <string name="title_clubs">Clubs</string>
+    <string name="title_events">Events</string>
+    <string name="title_profile">Profile</string>
 </resources>
